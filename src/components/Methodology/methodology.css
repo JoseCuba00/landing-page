@@ -1,0 +1,41 @@
+.methodology_father {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: center;
+  background-color: white;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  font-family: "Manrope", sans-serif;
+  scroll-snap-stop: always;
+}
+.recuadro {
+  background-color: #ffe9ff;
+  width: 28%;
+  height: 85%;
+  border-radius: 25px;
+  padding: 2%;
+  transition: transform 0.5s; /* Animation */
+}
+.recuadro:hover {
+  transform: scale(1.04);
+}
+
+.recuadro p {
+  font-size: x-large;
+}
+.recuadro_father {
+  width: 90%;
+  height: 95%;
+  display: grid;
+}
+.estadisticas p {
+  font-family: "Poppins", sans-serif;
+  color: #f4ee67;
+  font-weight: bold;
+  font-size: 5rem;
+  margin-bottom: 0px;
+}
+.estadisticas span {
+  font-size: x-large;
+}
