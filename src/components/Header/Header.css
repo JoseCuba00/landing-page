@@ -1,0 +1,19 @@
+.container {
+  font-family: "Manrope", sans-serif;
+}
+.img_logo {
+  height: 45px;
+  width: 150px;
+}
+.a:hover {
+  color: grey !important;
+}
+.inscription_bottom {
+  background-color: #e84227;
+  padding: 7%;
+  border-radius: 12px;
+}
+
+.inscription_bottom:hover {
+  background-color: #b81308 !important;
+}

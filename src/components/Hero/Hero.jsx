@@ -6,17 +6,22 @@ import "./hero.css"; // Asegúrate de importar tu archivo CSS
 
 const Hero = () => {
   return (
-    <section className="presentation_father section">
-      <div className="overlay"></div>
-      <video autoPlay loop muted className="videito  ">
-        <source src={presentation} type="video/mp4" />
-      </video>
-      <div className="presentation_content ">
-        <h1 className="display-1">¡Bienvenido!</h1>
-        <span>
-          Sumérgete en el fascinante mundo del español con nuestro curso
-          inicial. ¡Prepárate para expandir tus horizontes lingüísticos!
+    <section className="presentation_father section pt-5" id="home">
+      <div className="presentation_content">
+        <h1>
+          Учите&nbsp;<h1 className="highlighted">español</h1>не выходя из дома
+        </h1>
+        <span className="pt-5">
+          Учитесь у нас, и уже через несколько занятий ваши друзья подумают, что
+          вы испаноязычный с рождения!
         </span>
+      </div>
+      <div className="img_container">
+        <img
+          className="img_hero"
+          src={IMAGES.image_hero}
+          alt="Learning Spanish"
+        />
       </div>
     </section>
   );
