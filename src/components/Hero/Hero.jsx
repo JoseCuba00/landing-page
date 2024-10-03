@@ -1,8 +1,6 @@
 import React from "react";
-import presentation from "../../assets/presentation.mp4";
 import IMAGES from "../../Images/Images";
 import "bootstrap/dist/css/bootstrap.css";
-import "./Hero.css"; // Asegúrate de importar tu archivo CSS
 
 const Hero = () => {
   return (
