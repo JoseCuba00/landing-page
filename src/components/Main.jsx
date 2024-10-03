@@ -1,8 +1,7 @@
 import Hero from "./Hero/Hero";
 import Me from "./Me/Me";
-import Methodology from "./Methodology/methodology";
+import Methodology from "./Methodology/Methodology";
 import Pricing from "./Pricing/Pricing";
-import "./Hero/Hero.css";
 import Header from "./Header/Header";
 import Reviews from "./Reviews/Reviews";
 import Faq from "./Faq/Faq";

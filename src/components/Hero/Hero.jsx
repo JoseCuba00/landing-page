@@ -1,6 +1,7 @@
 import React from "react";
 import IMAGES from "../../Images/Images";
 import "bootstrap/dist/css/bootstrap.css";
+import "./Hero.css";
 
 const Hero = () => {
   return (
