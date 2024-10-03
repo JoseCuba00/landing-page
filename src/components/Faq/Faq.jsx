@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "./Faq.css"; // Asegúrate de importar tu archivo CSS
 
 const Faq = () => {
   const [openIndexes, setOpenIndexes] = useState([]);

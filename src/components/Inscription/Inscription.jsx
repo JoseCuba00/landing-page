@@ -1,4 +1,3 @@
-import "./Inscription.css";
 import "bootstrap/dist/css/bootstrap.css";
 import IMAGES from "../../Images/Images";
 import React, { useState } from "react";

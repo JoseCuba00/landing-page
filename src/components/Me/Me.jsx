@@ -1,4 +1,3 @@
-import "./me.css";
 import "bootstrap/dist/css/bootstrap.css";
 import IMAGES from "../../Images/Images";
 
