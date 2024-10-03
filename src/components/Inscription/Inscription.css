@@ -3,7 +3,7 @@
   transition: transform 0.5s ease-in-out;
   background-color: white;
   width: 100%;
-  height: 110vh;
+  min-height: 110vh;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
@@ -15,13 +15,12 @@
 
 .Inscription_container {
   width: 80%;
-  height: 50%;
+  min-height: 52%;
   background-color: #e84227; /* Color de fondo opcional */
   padding: 3%; /* Espaciado interno opcional */
   border-radius: 25px; /* Bordes redondeados opcionales */
   display: flex;
   justify-content: space-evenly;
-  color: white;
 }
 .input_box {
   display: flex;
@@ -31,12 +30,14 @@
 .Inscription_text {
   width: 60%;
 }
-.Inscription_text h5 {
+.Inscription_text p {
   font-size: 3rem;
   font-weight: 600;
+  color: white;
 }
 .Inscription_text span {
   font-size: larger;
+  color: white;
 }
 .input_box .input {
   width: 100%;
@@ -96,6 +97,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 4%;
+  padding-bottom: 3%;
 }
 
 .information {
@@ -124,4 +127,40 @@
 
 .information_dark {
   color: gray;
+}
+.form-control {
+  /* Clases del input */
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .Inscription_container {
+    flex-direction: column;
+    margin-bottom: 7%;
+  }
+  .Inscription_text {
+    width: 95%;
+  }
+  .Inscription_text p {
+    font-size: 1.8rem;
+    padding-bottom: 0px !important;
+  }
+  .inscription_form .telephone_input,
+  .name_input,
+  .buttom_input {
+    margin-bottom: 1.5rem;
+  }
+  .information_title {
+    font-size: 1.5rem;
+  }
+  .information_adress {
+    font-size: 0.9rem;
+  }
+  .information_box {
+    flex-direction: column;
+  }
+  .information {
+    align-items: flex-start;
+    padding-left: 4%;
+    padding-top: 5%;
+  }
 }

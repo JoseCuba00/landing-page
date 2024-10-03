@@ -62,25 +62,28 @@ const Reviews = () => {
               >
                 <div className="review_box">
                   <div className="cont">
-                    <img className="img_review" src={item.photo}></img>
+                    <div className="img_box d-flex">
+                      <img className="img_review " src={item.photo}></img>
+                      <div className=" name_box ">
+                        <h5>{item.name}</h5>
+                      </div>
+                    </div>
+
                     <div className="  review_content ps-2">
                       <div className="w-100 ">
                         <img
-                          className="img_quotes"
+                          className="img_quotes_1 "
                           src={IMAGES.img_quotes_start}
                         ></img>
                       </div>
-                      <span className="ps-4 pt-3" style={{ fontSize: "large" }}>
+                      <span className="ps-4 pt-3 review_description">
                         {item.review}
                       </span>
                       <div className="w-100 d-flex flex-row-reverse pt-3">
                         <img
-                          className="img_quotes"
+                          className="img_quotes_2 "
                           src={IMAGES.img_quotes_end}
                         ></img>
-                        <div className="d-flex justify-content-center w-100">
-                          <h5 style={{ fontWeight: "600" }}>{item.name}</h5>
-                        </div>
                       </div>
                     </div>
                   </div>

@@ -4,7 +4,7 @@ import IMAGES from "../../Images/Images";
 function Header() {
   return (
     <nav
-      className="navbar navbar-expand-sm navbar-light fixed-top"
+      className="navbar navbar-expand-lg navbar-light fixed-top"
       style={{
         backgroundColor: "white",
         boxShadow: "0px 0px 8px -5px rgb(1, 1, 1, 0.5)",

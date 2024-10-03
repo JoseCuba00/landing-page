@@ -52,3 +52,15 @@
   flex: 1; /* Permite que el texto ocupe el espacio restante */
   word-wrap: break-word; /* Permite que el texto se envuelva */
 }
+
+@media (max-width: 1000px) {
+  .faq-question {
+    font-size: 1.5rem;
+  }
+  .scrollable-menu {
+    width: 88%;
+  }
+  .faq_father h1 {
+    font-size: 2rem;
+  }
+}

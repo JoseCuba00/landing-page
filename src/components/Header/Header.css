@@ -17,3 +17,8 @@
 .inscription_bottom:hover {
   background-color: #b81308 !important;
 }
+@media (max-width: 1000px) {
+  .inscription_bottom {
+    padding: 3%;
+  }
+}

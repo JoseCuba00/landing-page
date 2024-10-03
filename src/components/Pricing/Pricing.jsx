@@ -20,7 +20,10 @@ const Pricing = () => {
           <img className="img_price" src={IMAGES.img_plan_medium}></img>
           <h2>Середнячок</h2>
           <p className="price">600₽ за урок</p>
-          <p>Два занятия в неделю, для тех, кто увлечен учебой.</p>
+          <p>
+            Два занятия в неделю, два шанса говорить на испанском и
+            совершенствовать свою устную речь.
+          </p>
         </div>
         <div className="price_box">
           <img className="img_price" src={IMAGES.img_plan_advance}></img>

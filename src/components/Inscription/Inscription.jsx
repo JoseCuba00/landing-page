@@ -10,8 +10,7 @@ const Inscription = () => {
   const [input2, setInput2] = useState("");
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    /*    event.preventDefault(); // Evita que la página se recargue
+    event.preventDefault(); // Evita que la página se recargue
     const response = fetch("http://127.0.0.1:8000/email", {
       method: "POST",
       headers: {
@@ -25,7 +24,7 @@ const Inscription = () => {
         console.log("todo empingao");
       }
     });
-    */
+
     console.log(input1, input2);
 
     const alertDiv = document.createElement("div");
@@ -41,7 +40,7 @@ const Inscription = () => {
     <section className="Inscription_father section" id="inscription">
       <div className="Inscription_container">
         <div className="Inscription_text ">
-          <h5 className="pb-3"> Первый урок абсолютно бесплатный</h5>
+          <p className="pb-3"> Первый урок абсолютно бесплатный</p>
           <span>
             Мы свяжемся с вами как можно скорее, чтобы ответить на все вопросы и
             назначить пробный урок
@@ -49,7 +48,7 @@ const Inscription = () => {
         </div>
         <div className="input_box">
           <form onSubmit={handleSubmit} className="inscription_form">
-            <div className="w-100">
+            <div className="w-100 name_input">
               <input
                 className="input"
                 type="text"
@@ -58,8 +57,9 @@ const Inscription = () => {
                 onChange={(e) => setInput1(e.target.value)}
               />
             </div>
-            <div>
+            <div className="w-100">
               <PhoneInput
+                className="telephone_input"
                 country={"ru"}
                 value={input2}
                 onChange={(phone) => setInput2(phone)}
@@ -68,6 +68,7 @@ const Inscription = () => {
                   borderRadius: "10px",
                   fontSize: "1.4rem",
                   padding: "9.5% 16%",
+                  width: "100%",
                 }}
                 buttonStyle={{
                   border: "transparent",
@@ -79,7 +80,9 @@ const Inscription = () => {
               />
             </div>
 
-            <button type="submit">Отрпавить</button>
+            <button type="submit" className="buttom_input">
+              Отрпавить
+            </button>
           </form>
         </div>
       </div>
@@ -130,7 +133,7 @@ const Inscription = () => {
           </div>
 
           <div className="w-75">
-            <h5 className="pt-3">
+            <h5 className="pt-3 information_adress">
               Улица Горького, 21, 236001, Калининград, Ленинградский район, 1-5
               этаж • 5 floors
             </h5>

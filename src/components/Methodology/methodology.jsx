@@ -6,22 +6,22 @@ const Methodology = () => {
   return (
     <section className="methodology_father section" id="benefits">
       <div className="recuadro_father">
-        <div className="d-flex justify-content-evenly">
-          <div className="estadisticas d-flex flex-column align-items-center">
+        <div className=" estadisticas_box">
+          <div className="estadisticas ">
             <p>100%</p>
             <span>удовлетворенность</span>
           </div>
-          <div className="estadisticas d-flex flex-column align-items-center">
+          <div className="estadisticas ">
             <p>+ 30 </p>
             <span>счастливчиков!</span>
           </div>
-          <div className="estadisticas d-flex flex-column align-items-center">
+          <div className="estadisticas ">
             <p>+1</p>
             <span>год опыта</span>
           </div>
         </div>
 
-        <div className="d-flex justify-content-around pt-5">
+        <div className="met_box_1 ">
           <div className="recuadro d-flex">
             <img className="img_recuadro" src={IMAGES.img_ind}></img>
             <div className="ps-3">
@@ -50,7 +50,7 @@ const Methodology = () => {
             </div>
           </div>
         </div>
-        <div className="d-flex d-flex justify-content-evenly ">
+        <div className="met_box_2 ">
           <div className="recuadro d-flex">
             <img className="img_recuadro" src={IMAGES.img_talk}></img>
             <div className="ps-3">

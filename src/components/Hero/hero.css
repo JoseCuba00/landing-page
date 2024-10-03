@@ -62,3 +62,19 @@ html {
   height: auto;
   border-radius: 8px;
 }
+
+@media (max-width: 500px) {
+  .presentation_content h1 {
+    font-size: 2rem;
+  }
+  .presentation_content {
+    width: 90%;
+  }
+  .presentation_content span {
+    padding-top: 3% !important;
+  }
+
+  .presentation_father {
+    flex-direction: column;
+  }
+}

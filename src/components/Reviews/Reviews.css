@@ -15,9 +15,18 @@
   font-weight: 600;
   font-size: 3.5rem;
 }
+.img_box {
+  width: 100%;
+
+  padding: 1%;
+  border-radius: 70px;
+}
 .img_review {
-  width: 20%;
-  border-radius: 25px;
+  max-width: 20%; /* O cualquier valor fijo que prefieras */
+  /* Debe ser igual al ancho */
+  border-radius: 50%; /* Hace que la imagen sea completamente circular */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+  aspect-ratio: 1 / 1;
 }
 .review_box {
   display: flex;
@@ -28,12 +37,13 @@
 }
 .cont {
   padding: 0% 2%;
-  height: 50%;
+  min-height: 62%;
   width: 70%;
   background: #e0efe789;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+
+  flex-direction: column;
   border-radius: 25px;
 }
 .review_content {
@@ -49,6 +59,34 @@
 .carousel-dark .carousel-indicators [data-bs-target] {
   background-color: red;
 }
-.img_quotes {
-  width: 10%;
+.img_quotes_1 {
+  width: 6%;
+}
+.img_quotes_2 {
+  width: 6%;
+}
+.review_description {
+  font-size: "large";
+}
+
+.name_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+.name_box h5 {
+  font-weight: 600;
+}
+@media (max-width: 1000px) {
+  .reviews_father .title {
+    font-size: 2rem;
+  }
+
+  .name_box h5 {
+    font-size: 1rem !important;
+  }
+  .review_description {
+    font-size: small;
+  }
 }
