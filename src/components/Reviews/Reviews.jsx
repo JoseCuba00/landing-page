@@ -61,10 +61,32 @@ const Reviews = () => {
               >
                 <div className="review_box">
                   <div className="cont">
-                    <div className="img_box d-flex">
+                    <div className="img_box ">
                       <img className="img_review " src={item.photo}></img>
-                      <div className=" name_box ">
+                      <div className=" name_box  flex-column">
                         <h5>{item.name}</h5>
+                        <div className="d-flex">
+                          <img
+                            src={IMAGES.img_icon_stars}
+                            className="img_stars"
+                          />
+                          <img
+                            src={IMAGES.img_icon_stars}
+                            className="img_stars"
+                          />
+                          <img
+                            src={IMAGES.img_icon_stars}
+                            className="img_stars"
+                          />
+                          <img
+                            src={IMAGES.img_icon_stars}
+                            className="img_stars"
+                          />
+                          <img
+                            src={IMAGES.img_icon_stars}
+                            className="img_stars"
+                          />
+                        </div>
                       </div>
                     </div>
 

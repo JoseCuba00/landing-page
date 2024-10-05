@@ -2,7 +2,7 @@ const IMAGES = {
   image_hero: new URL("./hero_2.jpg", import.meta.url).href,
   img_logo: new URL("./logo.png", import.meta.url).href,
   img_me: new URL("./IMG_20240630_165915.jpg", import.meta.url).href,
-  img_b: new URL("./balloons-concept-illustration.PNg", import.meta.url).href,
+  img_b: new URL("./balloons-concept-illustration.png", import.meta.url).href,
   img_talk: new URL("./talk.png", import.meta.url).href,
   img_price: new URL("./Calculator-pana.png", import.meta.url).href,
   img_platform: new URL(
@@ -32,6 +32,7 @@ const IMAGES = {
   img_icon_whatsapp: new URL("./icons8-whatsapp-50-1.png", import.meta.url)
     .href,
   img_icon_vk: new URL("./icons8-vk-50-1.png", import.meta.url).href,
+  img_icon_stars: new URL("./star-svgrepo-com.svg", import.meta.url).href,
 };
 
 export default IMAGES;

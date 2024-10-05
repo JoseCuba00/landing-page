@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth !important;
 }
+a {
+  text-decoration: none !important;
+}
 
 .contenedor > * {
   width: 100%;
@@ -196,6 +199,12 @@ html {
 .form-control {
   /* Clases del input */
   width: 100%;
+}
+.buttom_input {
+  border: transparent;
+  border-radius: 6px;
+  padding: 3% 6%;
+  background: white;
 }
 @media (max-width: 800px) {
   .Inscription_container {
@@ -425,6 +434,16 @@ html {
   .me_father {
     align-items: flex-start; /* Cambiar alineación en pantallas pequeñas */
   }
+  .me_container {
+    width: 100%;
+  }
+  .img_me_container {
+    display: flex;
+    justify-content: center;
+  }
+  .img_shadow {
+    left: 20%;
+  }
 }
 .methodology_father {
   padding-top: 2%;
@@ -605,8 +624,8 @@ html {
   font-size: 3.5rem;
 }
 .img_box {
-  width: 100%;
-
+  width: 69%;
+  display: flex;
   padding: 1%;
   border-radius: 70px;
 }
@@ -646,7 +665,7 @@ html {
 }
 
 .carousel-dark .carousel-indicators [data-bs-target] {
-  background-color: red;
+  background-color: red !important;
 }
 .img_quotes_1 {
   width: 6%;
@@ -654,15 +673,18 @@ html {
 .img_quotes_2 {
   width: 6%;
 }
+.img_stars {
+  width: 5%;
+}
 .review_description {
   font-size: "large";
 }
 
 .name_box {
   display: flex;
-  justify-content: center;
-  align-items: center;
+
   width: 70%;
+  padding-left: 5%;
 }
 .name_box h5 {
   font-weight: 600;
@@ -677,6 +699,13 @@ html {
   }
   .review_description {
     font-size: small;
+  }
+  .cont {
+    width: 100%;
+  }
+  .img_box {
+    width: 100%;
+    justify-content: center;
   }
 }
 @media (max-width: 500px) {
