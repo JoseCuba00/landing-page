@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import IMAGES from "../../Images/Images";
+import React, { useRef } from "react";
 
 const Reviews = () => {
   const reviews = [
@@ -34,101 +35,82 @@ const Reviews = () => {
       photo: IMAGES.img_rev_Diana,
     },
   ];
+  const reviewsContainerRef = useRef(null);
+
+  const scrollReviews = (direction) => {
+    const container = reviewsContainerRef.current;
+    console.log(container);
+    const scrollAmount = container.clientWidth;
+
+    if (direction === 1) {
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    } else {
+      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    }
+  };
   return (
     <section className="reviews_father" id="reviews">
       <h1 className="title">Что говорят наши ученики</h1>
-      <div id="carouselExampleDark" class="carousel carousel-dark slide h-75">
-        <div class="carousel-indicators">
-          {reviews.map((item, index) => {
-            return (
-              <button
-                type="button"
-                data-bs-target="#carouselExampleDark"
-                data-bs-slide-to={index}
-                class={index === 0 && "active"}
-                aria-label={`Slide ${index + 1}`}
-                aria-current="true"
-              ></button>
-            );
-          })}
-        </div>
-        <div class="carousel-inner h-100 ">
-          {reviews.map((item, index) => {
-            return (
-              <div
-                className={`carousel-item ${index === 0 && "active"} h-100`}
-                data-bs-interval={index}
-              >
-                <div className="review_box">
-                  <div className="cont">
-                    <div className="img_box ">
-                      <img className="img_review " src={item.photo}></img>
-                      <div className=" name_box  flex-column">
-                        <h5>{item.name}</h5>
-                        <div className="d-flex">
-                          <img
-                            src={IMAGES.img_icon_stars}
-                            className="img_stars"
-                          />
-                          <img
-                            src={IMAGES.img_icon_stars}
-                            className="img_stars"
-                          />
-                          <img
-                            src={IMAGES.img_icon_stars}
-                            className="img_stars"
-                          />
-                          <img
-                            src={IMAGES.img_icon_stars}
-                            className="img_stars"
-                          />
-                          <img
-                            src={IMAGES.img_icon_stars}
-                            className="img_stars"
-                          />
-                        </div>
-                      </div>
-                    </div>
 
-                    <div className="  review_content ps-2">
-                      <div className="w-100 ">
-                        <img
-                          className="img_quotes_1 "
-                          src={IMAGES.img_quotes_start}
-                        ></img>
-                      </div>
-                      <span className="ps-4 pt-3 review_description">
-                        {item.review}
-                      </span>
-                      <div className="w-100 d-flex flex-row-reverse pt-3">
-                        <img
-                          className="img_quotes_2 "
-                          src={IMAGES.img_quotes_end}
-                        ></img>
-                      </div>
+      <div className="reviews_container" ref={reviewsContainerRef}>
+        {reviews.map((item, index) => {
+          return (
+            <div className="review_box">
+              <div className="cont">
+                <div className="img_box ">
+                  <img
+                    className="img_review"
+                    src={item.photo}
+                    alt="Reviewer Image"
+                  ></img>
+                  <div className="name_box flex-column">
+                    <h5>{item.name}</h5>
+                    <div className="d-flex">
+                      <img src={IMAGES.img_icon_stars} className="img_stars" />
+                      <img src={IMAGES.img_icon_stars} className="img_stars" />
+                      <img src={IMAGES.img_icon_stars} className="img_stars" />
+                      <img src={IMAGES.img_icon_stars} className="img_stars" />
+                      <img src={IMAGES.img_icon_stars} className="img_stars" />
                     </div>
                   </div>
                 </div>
+                <div className="review_content ps-2">
+                  <div className="w-100 ">
+                    <img
+                      className="img_quotes_1"
+                      src={IMAGES.img_quotes_start}
+                      alt="Quote Start"
+                    ></img>
+                  </div>
+                  <span className="ps-4 pt-3 review_description">
+                    {item.review}
+                  </span>
+                  <div className="w-100 d-flex flex-row-reverse pt-3">
+                    <img
+                      className="img_quotes_2"
+                      src={IMAGES.img_quotes_end}
+                      alt="Quote End"
+                    ></img>
+                  </div>
+                </div>
               </div>
-            );
-          })}
+            </div>
+          );
+        })}
+      </div>
+      <div className="buttons_container">
+        <div className="buttons_box">
+          <img
+            src={IMAGES.img_bt_prev}
+            className="img_next"
+            onClick={() => scrollReviews(-1)}
+          ></img>
+          <img
+            src={IMAGES.img_bt_next}
+            className="img_next"
+            onClick={() => scrollReviews(1)}
+          ></img>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide="prev"
-        >
-          <img className="img_next" src={IMAGES.img_bt_prev}></img>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide="next"
-        >
-          <img className="img_next" src={IMAGES.img_bt_next}></img>
-        </button>
       </div>
     </section>
   );

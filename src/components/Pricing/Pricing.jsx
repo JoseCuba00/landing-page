@@ -4,7 +4,10 @@ import IMAGES from "../../Images/Images";
 const Pricing = () => {
   return (
     <section className="pricing_father section" id="pricing">
-      <h2 className="title">Выбирайте план по желаемому темпу</h2>
+      <div className="display-3 d-flex justify-content-center">
+        <h2 className="title">Выбирайте план по желаемому темпу</h2>
+      </div>
+
       <div className="pricing_container">
         <div className="price_box">
           <img className="img_price" src={IMAGES.img_plan_basic}></img>
