@@ -332,7 +332,7 @@ a {
   transition: transform 0.5s ease-in-out;
   background-color: white;
   width: 100%;
-  min-height: 100%;
+  max-height: 100vh;
   scroll-snap-align: center;
   display: flex;
   justify-content: center; /* Centrar horizontalmente */
@@ -352,18 +352,15 @@ a {
 }
 
 .me_container span {
-  font-size: larger;
+  font-size: large;
   font-weight: 400;
 }
 
 .description {
+  margin-top: 5%;
   display: flex;
   align-items: center;
-}
-
-.me_container p {
-  font-size: 4rem;
-  font-weight: bold;
+  justify-content: space-evenly;
 }
 
 .img_wrapper {
@@ -377,26 +374,39 @@ a {
 }
 
 .img_me {
-  position: relative;
+  position: absolute;
+  height: 100%;
   width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
   z-index: 2;
 }
-
-.img_shadow {
+.img_me:hover {
+  cursor: pointer;
+  box-shadow: inset 12px 12px 20px 35px rgba(0, 0, 255, 0.2);
+}
+.overlay_img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #f0f0f0; /* Color de sombra opcional */
-  border-radius: 25px;
-  transform: translate(15px, 15px); /* Desplaza el div de sombra */
-  transform: rotate(-10deg);
-  z-index: 1; /* Asegura que la sombra esté debajo de la imagen */
+  background-color: rgba(0, 0, 0, 0); /* Transparente inicialmente */
+  border-radius: 25px; /* Bordes redondeados para coincidir con el contenedor */
+  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  z-index: 3; /* Asegura que el overlay esté encima de la imagen */
+}
+.main-content:hover .overlay_img {
+  background-color: rgba(0, 0, 0, 0.3); /* Color negro semitransparente */
+}
+.main-content:hover .play_button {
+  color: black; /* Color negro semitransparente */
 }
 
 .highlighted_span {
@@ -410,10 +420,102 @@ a {
   flex-direction: column;
   justify-content: space-evenly;
 }
+.teacher_description {
+  width: 50%;
+}
+.video_box {
+  padding: 2%;
+  border-radius: 25px;
+  min-width: 50%;
+  display: flex;
+  background-color: #e0efe789;
+}
+.modal_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.play_button {
+  color: gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11%;
+  /* transform: translate(-50%, -50%); */
+  z-index: 4;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  padding: 1%;
+  aspect-ratio: 1 / 1;
+}
+
+.main-content {
+  margin-right: 6%;
+  width: 50%;
+  flex-shrink: 0;
+  position: relative;
+
+  border-radius: 16px;
+  cursor: pointer;
+}
+.modal-content {
+  width: 80%;
+  height: 80%;
+  border: none;
+  border-radius: 8px;
+}
+.teachers_list {
+  display: flex;
+  justify-content: center;
+  min-width: 50%;
+}
+.professor-btn {
+  width: 15%;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  margin-left: -4%; /* Ajusta según sea necesario para lograr el efecto entrelazado */
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+.professor-btn:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+.teachers_list .active {
+  border: solid red;
+}
+.close {
+  position: absolute;
+  top: 200px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+}
 
 @media (max-width: 1000px) {
-  .img_me {
-    width: 60%;
+  .me_container .title {
+    font-size: 2rem;
+    padding-left: 10%;
   }
   .img_shadow {
     width: 60%;
@@ -422,7 +524,7 @@ a {
     font-size: 2rem;
   }
   .description {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .me_content {
     padding-top: 7%;
@@ -444,9 +546,12 @@ a {
   .img_shadow {
     left: 20%;
   }
+  .teachers_list {
+    margin-bottom: 10%;
+  }
 }
 .methodology_father {
-  padding-top: 2%;
+  padding-top: 6%;
   width: 100%;
   min-height: 100vh;
   scroll-snap-align: center;
@@ -456,6 +561,11 @@ a {
   align-items: center; /* Centrar verticalmente */
   font-family: "Manrope", sans-serif;
   scroll-snap-stop: always;
+  flex-direction: column;
+}
+.title {
+  font-size: 3.5rem;
+  font-weight: 600;
 }
 .met_box_1 {
   display: flex;
@@ -499,14 +609,13 @@ a {
 }
 .estadisticas p {
   font-family: "Manrope", sans-serif;
-
+  color: red;
   font-weight: bold;
   font-size: 5rem;
   margin-bottom: 0px;
 }
 .estadisticas span {
   font-size: larger;
-  color: red;
 }
 .img_recuadro {
   width: 42%;
@@ -520,6 +629,9 @@ a {
 }
 
 @media (max-width: 500px) {
+  .title {
+    font-size: 2rem;
+  }
   .methodology_father {
     padding-top: 20%;
   }

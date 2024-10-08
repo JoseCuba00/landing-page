@@ -4,6 +4,9 @@ import IMAGES from "../../Images/Images";
 const Methodology = () => {
   return (
     <section className="methodology_father section" id="benefits">
+      <h3 class="   display-3 d-flex justify-content-center">
+        <p className="title">Почему мы?</p>
+      </h3>
       <div className="recuadro_father">
         <div className=" estadisticas_box">
           <div className="estadisticas ">

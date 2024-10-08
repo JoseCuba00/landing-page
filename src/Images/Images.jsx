@@ -18,10 +18,13 @@ const IMAGES = {
     import.meta.url
   ).href,
   img_rev_jose: new URL("./IMG_20240618_095425.jpg", import.meta.url).href,
-  img_rev_Diana: new URL(
-    "./17249447551724944755-file_1759947.jpg",
-    import.meta.url
-  ).href,
+  img_rev_Diana: new URL("./IMG_20240617_175623.jpg", import.meta.url).href,
+  img_rev_Pedro: new URL("./photo_2024-10-07_13-37-09.jpg", import.meta.url)
+    .href,
+  img_rev_Rafael: new URL("./photo_2024-10-07_13-41-15.jpg", import.meta.url)
+    .href,
+  img_rev_Alain: new URL("./photo_2024-10-07_14-23-04.jpg", import.meta.url)
+    .href,
   img_bt_next: new URL("./chevron-rounded-arrowsd-set.png", import.meta.url)
     .href,
   img_bt_prev: new URL("./chevron-prev.png", import.meta.url).href,

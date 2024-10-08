@@ -20,19 +20,15 @@ const Inscription = () => {
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       } else {
-        console.log("todo empingao");
+        const alertDiv = document.createElement("div");
+        alertDiv.className = "success-popup";
+        alertDiv.textContent = "Los datos han sido enviados exitosamente";
+        document.body.appendChild(alertDiv);
+        setTimeout(() => {
+          document.body.removeChild(alertDiv);
+        }, 4000);
       }
     });
-
-    console.log(input1, input2);
-
-    const alertDiv = document.createElement("div");
-    alertDiv.className = "success-popup";
-    alertDiv.textContent = "Los datos han sido enviados exitosamente";
-    document.body.appendChild(alertDiv);
-    setTimeout(() => {
-      document.body.removeChild(alertDiv);
-    }, 4000);
   };
 
   return (
