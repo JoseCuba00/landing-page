@@ -332,7 +332,7 @@ a {
   transition: transform 0.5s ease-in-out;
   background-color: white;
   width: 100%;
-  max-height: 100vh;
+  max-height: 121vh;
   scroll-snap-align: center;
   display: flex;
   justify-content: center; /* Centrar horizontalmente */
@@ -408,6 +408,15 @@ a {
 .main-content:hover .play_button {
   color: black; /* Color negro semitransparente */
 }
+.main-content {
+  margin-right: 6%;
+  width: 50%;
+  flex-shrink: 0;
+  position: relative;
+
+  border-radius: 16px;
+  cursor: pointer;
+}
 
 .highlighted_span {
   background-color: rgb(245, 245, 245);
@@ -460,15 +469,6 @@ a {
   aspect-ratio: 1 / 1;
 }
 
-.main-content {
-  margin-right: 6%;
-  width: 50%;
-  flex-shrink: 0;
-  position: relative;
-
-  border-radius: 16px;
-  cursor: pointer;
-}
 .modal-content {
   width: 80%;
   height: 80%;
@@ -549,7 +549,20 @@ a {
   .teachers_list {
     margin-bottom: 10%;
   }
+  .teacher_description {
+    width: 85%;
+  }
+  .video_box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-content {
+    width: 60%;
+    height: 394px;
+    margin-bottom: 6%;
+  }
 }
+
 .methodology_father {
   padding-top: 6%;
   width: 100%;
