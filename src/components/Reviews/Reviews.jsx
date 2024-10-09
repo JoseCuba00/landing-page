@@ -49,7 +49,7 @@ const Reviews = () => {
     }
   };
   return (
-    <section className="reviews_father" id="reviews">
+    <section className="reviews_father hidden" id="reviews">
       <h1 className="title">Что говорят наши ученики</h1>
 
       <div className="reviews_container" ref={reviewsContainerRef}>

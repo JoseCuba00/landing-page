@@ -3,6 +3,8 @@ import IMAGES from "../../Images/Images";
 import React, { useState } from "react";
 
 const Me = () => {
+  const [isAnimated, setIsAnimated] = useState(true);
+
   function VideoModal({ videoUrl, onClose }) {
     console.log(videoUrl);
     return (
@@ -61,6 +63,7 @@ const Me = () => {
   // Función para manejar la selección de un profesor
   const handleProfessorSelect = (profKey) => {
     setSelectedProfessor(teachers[profKey]);
+    setIsAnimated(false); // Desactiva la animación después de seleccionar un profesor
   };
 
   // Función para abrir el modal
@@ -73,8 +76,9 @@ const Me = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
   return (
-    <section className="me_father section" id="me">
+    <section className="me_father section hidden" id="me">
       <div className="me_container">
         <h3 class="display-3 d-flex justify-content-center">
           <p className="title">С нами не скучно!</p>
@@ -85,7 +89,7 @@ const Me = () => {
               <div className="play_button">&#9658;</div>
               <div class="overlay_img"></div>
               <img
-                className="img_me"
+                className="img_me "
                 src={selectedProfessor.image}
                 alt={selectedProfessor.name}
               />
@@ -110,8 +114,8 @@ const Me = () => {
                 alt={teacher.name} // Buena práctica para accesibilidad
                 onClick={() => handleProfessorSelect(`teacher${index + 1}`)}
                 className={`professor-btn ${
-                  selectedProfessor.name === teacher.name && "active"
-                }`}
+                  isAnimated ? "hidden" : "hidden show"
+                } ${selectedProfessor.name === teacher.name ? "active" : ""}`}
               />
             ))}
           </div>

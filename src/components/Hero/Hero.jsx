@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const Hero = () => {
   return (
-    <section className="presentation_father section pt-5" id="home">
+    <section className="presentation_father section pt-5 hidden" id="home">
       <div className="presentation_content">
         <h1>
           Учите&nbsp;<h1 className="highlighted">español</h1>не выходя из дома

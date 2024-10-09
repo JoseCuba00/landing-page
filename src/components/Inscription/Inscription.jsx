@@ -32,7 +32,7 @@ const Inscription = () => {
   };
 
   return (
-    <section className="Inscription_father section" id="inscription">
+    <section className="Inscription_father section hidden" id="inscription">
       <div className="Inscription_container">
         <div className="Inscription_text ">
           <p className="pb-3"> Первый урок абсолютно бесплатный</p>

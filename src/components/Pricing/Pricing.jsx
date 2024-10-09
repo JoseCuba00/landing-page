@@ -3,7 +3,7 @@ import IMAGES from "../../Images/Images";
 
 const Pricing = () => {
   return (
-    <section className="pricing_father section" id="pricing">
+    <section className="pricing_father section hidden" id="pricing">
       <div className="display-3 d-flex justify-content-center">
         <h2 className="title">Выбирайте план по желаемому темпу</h2>
       </div>

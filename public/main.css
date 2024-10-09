@@ -44,7 +44,7 @@ a {
 }
 .presentation_content .highlighted {
   color: red; /* Color rojo para "español" */
-  background-color: #e0efe789;
+  background-color: rgb(245, 245, 245);
 }
 
 .presentation_content span {
@@ -147,7 +147,7 @@ a {
   border-radius: 0;
 }
 .success-popup {
-  background-color: #e0efe789;
+  background-color: rgb(245, 245, 245);
   border-color: #c3e6cb;
   color: black;
   padding: 2%;
@@ -160,7 +160,7 @@ a {
 }
 .information_box {
   width: 100%;
-  background-color: #e0efe789;
+  background-color: rgb(245, 245, 245);
   height: 40%;
   display: flex;
   align-items: center;
@@ -410,7 +410,7 @@ a {
 }
 
 .highlighted_span {
-  background-color: #e0efe789;
+  background-color: rgb(245, 245, 245);
   color: red;
 }
 
@@ -428,7 +428,7 @@ a {
   border-radius: 25px;
   min-width: 50%;
   display: flex;
-  background-color: #e0efe789;
+  background-color: rgb(245, 245, 245);
 }
 .modal_1 {
   display: flex;
@@ -577,7 +577,7 @@ a {
   justify-content: space-around;
 }
 .recuadro {
-  background-color: #e0efe789;
+  background-color: rgb(245, 245, 245);
   width: 27%;
   height: 80%;
   border-radius: 25px;
@@ -663,8 +663,8 @@ a {
   }
 }
 .pricing_father {
-  padding-top: 7%;
-  min-height: 100vh;
+  background-color: rgb(245, 245, 245);
+  min-height: 85vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -675,7 +675,7 @@ a {
 .pricing_father .title {
   font-weight: 600;
   font-size: 3.5rem;
-  margin-bottom: 4%;
+  margin-bottom: 7%;
 }
 .pricing_container {
   height: 100%;
@@ -685,7 +685,7 @@ a {
   align-items: center;
 }
 .price_box {
-  background-color: #e0efe789;
+  background-color: white;
   width: 20%;
   height: 70%;
   border-radius: 26px;
@@ -708,6 +708,7 @@ a {
 
 @media (max-width: 500px) {
   .pricing_father .title {
+    padding-top: 10%;
     font-size: 2rem;
     padding-left: 10%;
   }
@@ -720,6 +721,7 @@ a {
   }
 }
 .reviews_father {
+  background-color: rgb(245, 245, 245);
   padding-top: 6%;
   width: 100%;
   min-height: 83vh;
@@ -757,7 +759,7 @@ a {
   display: inline-block; /* Display reviews horizontally */
   width: 50%; /* Account for margins */
   margin: 0.5rem;
-  background: #e0efe789;
+  background: white;
   border-radius: 25px;
   height: 70%;
   scroll-snap-align: center;
@@ -801,7 +803,7 @@ a {
   padding: 4%;
 }
 .img_next:hover {
-  background-color: #e0efe789;
+  background-color: rgb(245, 245, 245);
 }
 .buttons_container {
   padding-bottom: 4%;
@@ -877,4 +879,26 @@ a {
   .presentation_father {
     flex-direction: column;
   }
+}
+
+.hidden {
+  opacity: 0;
+
+  transition: opacity 1.5s;
+}
+.show {
+  opacity: 1;
+}
+
+.professor-btn:nth-child(1) {
+  transition-delay: 200ms;
+}
+.professor-btn:nth-child(2) {
+  transition-delay: 400ms;
+}
+.professor-btn:nth-child(3) {
+  transition-delay: 500ms;
+}
+.professor-btn:nth-child(4) {
+  transition-delay: 600ms;
 }

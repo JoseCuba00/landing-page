@@ -47,7 +47,7 @@ const Faq = () => {
   ];
 
   return (
-    <section className="faq_father section pt-5" id="faq">
+    <section className="faq_father section pt-5 hidden" id="faq">
       <h1>FAQ</h1>
       <div
         className="scrollable-menu d-flex flex-column align-items-stretch"
