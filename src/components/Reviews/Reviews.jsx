@@ -51,10 +51,10 @@ const Reviews = () => {
     <section className="reviews_father hidden" id="reviews">
       <h1 className="title">Что говорят наши ученики</h1>
 
-      <div className="reviews_container" ref={reviewsContainerRef}>
+      <div className="reviews_container hidden" ref={reviewsContainerRef}>
         {reviews.map((item, index) => {
           return (
-            <div className="review_box">
+            <div className="review_box ">
               <div className="cont">
                 <div className="img_box ">
                   <img

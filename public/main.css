@@ -885,7 +885,7 @@ a {
 .hidden {
   opacity: 0;
   filter: blur(2px);
-  transform: translateY(40%);
+  transform: translateY(30%);
   transition: opacity 0.5s, filter 0.9s, transform 0.9s;
 }
 .show {
