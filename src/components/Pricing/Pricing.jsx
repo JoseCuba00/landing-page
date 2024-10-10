@@ -9,7 +9,7 @@ const Pricing = () => {
       </div>
 
       <div className="pricing_container">
-        <div className="price_box">
+        <div className="price_box hidden">
           <img className="img_price" src={IMAGES.img_plan_basic}></img>
           <h2>Чилл</h2>
           <p className="price">800₽ за урок</p>
@@ -18,7 +18,7 @@ const Pricing = () => {
             спокойном темпе.
           </p>
         </div>
-        <div className="price_box">
+        <div className="price_box hidden">
           <img className="img_price" src={IMAGES.img_plan_medium}></img>
           <h2>Середнячок</h2>
           <p className="price">600₽ за урок</p>
@@ -27,7 +27,7 @@ const Pricing = () => {
             совершенствовать свою устную речь.
           </p>
         </div>
-        <div className="price_box">
+        <div className="price_box hidden">
           <img className="img_price" src={IMAGES.img_plan_advance}></img>
           <h2>Турбо</h2>
           <p className="price">500₽ за урок</p>

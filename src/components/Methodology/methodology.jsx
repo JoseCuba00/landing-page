@@ -3,12 +3,12 @@ import IMAGES from "../../Images/Images";
 
 const Methodology = () => {
   return (
-    <section className="methodology_father section hidden" id="benefits">
+    <section className="methodology_father section " id="benefits">
       <h3 class="   display-3 d-flex justify-content-center">
-        <p className="title">Почему мы?</p>
+        <p className="title hidden">Почему мы?</p>
       </h3>
-      <div className="recuadro_father">
-        <div className=" estadisticas_box">
+      <div className="recuadro_father ">
+        <div className=" estadisticas_box hidden">
           <div className="estadisticas ">
             <p>100%</p>
             <span>удовлетворенность</span>
@@ -23,7 +23,7 @@ const Methodology = () => {
           </div>
         </div>
 
-        <div className="met_box_1 ">
+        <div className="met_box_1  hidden">
           <div className="recuadro d-flex">
             <img className="img_recuadro" src={IMAGES.img_ind}></img>
             <div className="ps-3">

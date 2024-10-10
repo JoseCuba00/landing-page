@@ -24,8 +24,7 @@ const Reviews = () => {
     },
     {
       name: "Margarita",
-      review:
-        " adfffffffffffffffffffffffdddddddddddddddddddvvvvvvvvvvv csssssssssss sxxxxxxxxxxxx ",
+      review: " adfffffffffffffffffffffffdvvvvvvvv csssssssssss sxxxxxxxxxxxx ",
       photo: IMAGES.img_rev_jose,
     },
     {

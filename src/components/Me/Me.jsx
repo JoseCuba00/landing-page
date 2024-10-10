@@ -3,28 +3,6 @@ import IMAGES from "../../Images/Images";
 import React, { useState } from "react";
 
 const Me = () => {
-  const [isAnimated, setIsAnimated] = useState(true);
-
-  function VideoModal({ videoUrl, onClose }) {
-    console.log(videoUrl);
-    return (
-      <div className="modal_1" onClick={onClose}>
-        <span className="close" onClick={onClose}>
-          x
-        </span>
-        <iframe
-          className="modal-content"
-          src={videoUrl}
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title="Video Modal"
-          onClick={(e) => e.stopPropagation()} // Evita cerrar el modal al hacer clic dentro del iframe
-        ></iframe>
-      </div>
-    );
-  }
-
   const teachers = {
     teacher1: {
       name: "Jose Carlos",
@@ -55,11 +33,12 @@ const Me = () => {
         "Sofía Margarita Vergara Vergara (Spanish: [soˈfi.a βeɾˈɣaɾa]; born July 10, 1972)[1][2] is a Colombian and American actress and television personality. She is known for her role as Gloria Delgado-Pritchett in the ABC sitcom Modern  Emmy Award nominatiAward nominations",
     },
   };
+
   const [selectedProfessor, setSelectedProfessor] = useState(teachers.teacher1);
+  const [isAnimated, setIsAnimated] = useState(true); // Estado para anadir la clase show despues de cliclear en los profes
 
   // Estado para controlar el modal
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   // Función para manejar la selección de un profesor
   const handleProfessorSelect = (profKey) => {
     setSelectedProfessor(teachers[profKey]);
@@ -99,10 +78,20 @@ const Me = () => {
             </div>
 
             {isModalOpen && (
-              <VideoModal
-                videoUrl={selectedProfessor.video}
-                onClose={closeModal}
-              />
+              <div className="modal_1" onClick={closeModal}>
+                <p className="close" onClick={closeModal}>
+                  x
+                </p>
+                <iframe
+                  className="modal-content"
+                  src={selectedProfessor.video}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title="Video Modal"
+                  onClick={(e) => e.stopPropagation()} // Evita cerrar el modal al hacer clic dentro del iframe
+                ></iframe>
+              </div>
             )}
           </div>
 
